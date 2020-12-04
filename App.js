@@ -1,8 +1,20 @@
+import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+const customFonts = {
+  Freshman: require('./assets/fonts/Freshman.ttf'),
+};
+
 export default function App() {
+
+  const [loaded] = useFonts(customFonts);
+
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.grey}>Welcome to EasyWorkout Application </Text>
@@ -24,6 +36,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
-    fontFamily: 'sans-serif-thin',
+    fontFamily: 'Freshman',
   },
 });
