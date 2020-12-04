@@ -2,8 +2,8 @@ import { useFonts } from 'expo-font';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Camera from './screens/camera/Camera';
-import Home from './screens/home/Home';
+import Camera from './src/screens/camera/Camera';
+import Home from './src/screens/home/Home';
 
 const customFonts = {
   QuicksandBold: require('./assets/fonts/Quicksand-Bold.ttf'),
@@ -22,7 +22,7 @@ export default function App() {
   }
 
   return (
-    <NavigationContainer>{/* Rest of your app code */}
+    <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Camera" component={Camera} />
