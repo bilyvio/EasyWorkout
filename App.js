@@ -11,6 +11,7 @@ export default function App() {
 
   const [loaded] = useFonts(customFonts);
 
+  // @TODO add loading indicator instead of null here
   if (!loaded) {
     return null;
   }
