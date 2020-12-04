@@ -4,7 +4,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const customFonts = {
-  Freshman: require('./assets/fonts/Freshman.ttf'),
+  QuicksandBold: require('./assets/fonts/Quicksand-Bold.ttf'),
+  QuicksandVariable: require('./assets/fonts/Quicksand-VariableFont_wght.ttf'),
 };
 
 export default function App() {
@@ -37,6 +38,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
-    fontFamily: 'Freshman',
+    fontFamily: 'QuicksandBold',
   },
 });
