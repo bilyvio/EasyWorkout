@@ -1,8 +1,22 @@
+import { useFonts } from 'expo-font';
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+const customFonts = {
+  QuicksandBold: require('./assets/fonts/Quicksand-Bold.ttf'),
+  QuicksandVariable: require('./assets/fonts/Quicksand-VariableFont_wght.ttf'),
+};
+
 export default function App() {
+
+  const [loaded] = useFonts(customFonts);
+
+  // @TODO add loading indicator instead of null here
+  if (!loaded) {
+    return null;
+  }
+
   return (
     <View style={styles.container}>
       <Text style={styles.grey}>Welcome to EasyWorkout Application </Text>
@@ -24,6 +38,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     textAlign: 'center',
-    fontFamily: 'sans-serif-thin',
+    fontFamily: 'QuicksandBold',
   },
 });
