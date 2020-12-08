@@ -1,16 +1,34 @@
-import React from 'react';
-import { Button, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import {
+  View, Text, Button
+} from 'react-native';
+import { Camera } from 'expo-camera';
+import * as Permissions from 'expo-permissions';
+import { usePermissions } from 'expo-permissions';
+import CameraControls from '../../components/cameraControls/CameraControls';
 
-const Camera = ({ navigation }) => {
+import styles from './styles';
+
+const CameraContainer = ({ navigation }) => {
+  const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
+
+  const [type, setType] = useState(Camera.Constants.Type.back);
+
+  if (!permission || permission.status !== 'granted') {
+    return (
+      <View>
+        <Text>Permission is not granted</Text>
+        <Button title="Grant permission" onPress={askForPermission} />
+      </View>
+    );
+  }
+
   return (
-    <View>
-      <Text>Camera</Text>
-      <Button
-        title="Go to Home"
-        onPress={() => navigation.navigate('Home')}
-      />
+    <View style={styles.flexContainer}>
+      <Camera style={styles.flexContainer} type={type} />
+      <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
     </View>
   );
 };
 
-export default Camera;
+export default CameraContainer;

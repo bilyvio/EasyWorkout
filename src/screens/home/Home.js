@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, Button } from 'react-native';
-import CustomButton from '../../components/CustomButton';
 import { styles } from './styles';
 
 const Home = ({ navigation }) => {
@@ -11,7 +10,6 @@ const Home = ({ navigation }) => {
         title="Go to Camera"
         onPress={() => navigation.navigate('Camera')}
       />
-      <CustomButton />
     </View>
   );
 };
