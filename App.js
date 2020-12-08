@@ -2,7 +2,7 @@ import { useFonts } from 'expo-font';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Camera from './src/screens/camera/Camera';
+import CameraContainer from './src/screens/camera/Camera';
 import Home from './src/screens/home/Home';
 
 const customFonts = {
@@ -25,7 +25,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Camera" component={Camera} />
+        <Stack.Screen name="Camera" component={CameraContainer} />
       </Stack.Navigator>
     </NavigationContainer>
   );
