@@ -5,6 +5,47 @@ export default StyleSheet.create({
   flexContainer: {
     flex: 1,
   },
+  navBar: {
+    height: 95,
+    backgroundColor: '#EE4733',
+    elevation: 3,
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
+    // justifyContent: 'space-between'
+  },
+
+  sectionTitle: {
+    top: '5%',
+    fontFamily: 'QuicksandBold',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: 23,
+    lineHeight: 25,
+    color: '#FFFFFF',
+    alignSelf: 'center'
+  },
+
+  tabBar: {
+    backgroundColor: 'white',
+    height: 73,
+    borderTopWidth: 0.5,
+    borderColor: '#E5E5E5',
+    paddingHorizontal: 25,
+    flexDirection: 'row',
+    alignItems: 'flex-end',
+    // display: 'flex',
+    justifyContent: 'space-evenly'
+  },
+  tabItem: {
+    height: 90,
+    left: '82%',
+    right: '80%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   viewBox: {
     flex: 1,
     backgroundColor: colors.transparent,
@@ -21,7 +62,7 @@ export default StyleSheet.create({
     color: colors.black
   },
   loadingContainer: {
-    minHeight: '200px',
+    minHeight: '40%',
     alignSelf: 'center',
     color: colors.white
   }

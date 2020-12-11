@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
-  View, Text, Button
+  View, Text, Button, Dimensions
 } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
@@ -9,10 +9,19 @@ import CameraControls from '../../components/cameraControls/CameraControls';
 
 import styles from './styles';
 
+const res = [
+  { width: 240, height: 240},
+  { width: 240, height: 180},
+  { width: 240, height: 140},
+  { width: 180, height: 240},
+  { width: 140, height: 240}
+];
+
 const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
 
   const [type, setType] = useState(Camera.Constants.Type.back);
+
 
   if (!permission || permission.status !== 'granted') {
     return (
@@ -22,6 +31,8 @@ const CameraContainer = ({ navigation }) => {
       </View>
     );
   }
+
+
 
   return (
     <View style={styles.flexContainer}>
