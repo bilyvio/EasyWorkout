@@ -19,17 +19,6 @@ const CameraControls = ({ typeFromProps, setType, navigation }) => {
       >
         <Text style={styles.buttonStyles}> Flip </Text>
       </TouchableOpacity>
-
-      <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => {
-          navigation.navigate('Home');
-        }}
-      >
-        <Text style={styles.buttonStyles}> Go where you want </Text>
-      </TouchableOpacity>
-
-      <Text>test</Text>
     </View>
   );
 };

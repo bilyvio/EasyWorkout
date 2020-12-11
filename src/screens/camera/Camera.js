@@ -1,18 +1,43 @@
-import React, { useState } from 'react';
+import { useFocusEffect } from '@react-navigation/core';
+import React, { useEffect, useState } from 'react';
 import {
-  View, Text, Button
+  View, Text, Button, TouchableOpacity
 } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
 import { usePermissions } from 'expo-permissions';
-import CameraControls from '../../components/cameraControls/CameraControls';
+import CameraControls from '../../components/CameraControls/CameraControls';
+import VideoComponent from '../../components/VideoComponent/VideoComponent';
 
 import styles from './styles';
 
 const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
 
+  const DETAILS_NAVIGATION_TIMEOUT = 3000;
+
   const [type, setType] = useState(Camera.Constants.Type.back);
+  const [isVideoActive, setIsVideoActive] = useState(true);
+
+  useFocusEffect(
+    React.useCallback(() => {
+      // Do something when the screen is focused
+      setIsVideoActive(true);
+
+      const navigateTimeout = setTimeout(() => {
+        setIsVideoActive(false);
+        navigation.navigate('Details');
+      }, DETAILS_NAVIGATION_TIMEOUT);
+
+      return () => {
+        // Do something when the screen is unfocused
+        // Useful for cleanup functions
+
+        clearTimeout(navigateTimeout);
+        setIsVideoActive(false);
+      };
+    }, [])
+  );
 
   if (!permission || permission.status !== 'granted') {
     return (
@@ -25,8 +50,16 @@ const CameraContainer = ({ navigation }) => {
 
   return (
     <View style={styles.flexContainer}>
-      <Camera style={styles.flexContainer} type={type} />
-      <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
+      {/* <Camera style={styles.flexContainer} type={type} /> */}
+      {isVideoActive && <VideoComponent />}
+      <View style={styles.loadingContainer}>
+        <TouchableOpacity
+          style={styles.buttonContainer}
+        >
+          <Text style={styles.buttonStyles}> Recognize </Text>
+        </TouchableOpacity>
+      </View>
+      {/* <CameraControls setType={setType} typeFromProps={type} navigation={navigation} /> */}
     </View>
   );
 };
