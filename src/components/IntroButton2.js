@@ -1,0 +1,17 @@
+import { styles } from '../screens/intro_screen2/styles';
+import { Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+
+const IntroButton2 = (props) => {
+  const { buttonBar, buttonText } = styles;
+  return (
+    <TouchableOpacity style={buttonBar} onPress={props.onPress}>
+      <Text style={buttonText}>
+        Next
+        {props.children}
+      </Text>
+    </TouchableOpacity>
+  );
+};
+
+export default IntroButton2;
