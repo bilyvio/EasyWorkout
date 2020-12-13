@@ -3,7 +3,7 @@ import colors from '../../constants/colors';
 
 export default StyleSheet.create({
   flexContainer: {
-    flex: 1,
+    flex: 1
   },
   navBar: {
     height: 95,

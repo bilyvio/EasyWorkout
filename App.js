@@ -2,22 +2,17 @@ import { useFonts } from 'expo-font';
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import VideoComponent from './src/components/VideoComponent/VideoComponent';
 import CameraContainer from './src/screens/camera/Camera';
+import Details from './src/screens/details/Details';
 import Home from './src/screens/home/Home';
-
-import { CameraTitle } from './src/components/CameraTitle/styles';
 
 const headerConfig = {
   title: 'Scan the simulator',
   headerStyle: {
-    height: 95,
+    height: 85,
     backgroundColor: '#EE4733',
-    elevation: 3,
-    paddingHorizontal: 15,
-    flexDirection: 'row',
-    alignItems: 'center',
-    display: 'flex',
-    justifyContent: 'center'
+    elevation: 3
   },
   headerTintColor: '#fff',
   headerTitleAlign: 'center',
@@ -49,7 +44,6 @@ export default function App() {
     return null;
   }
 
-
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -62,6 +56,17 @@ export default function App() {
           name="Camera"
           component={CameraContainer}
           options={{...headerConfig, headerLeft: null}}
+        />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{...headerConfig, title: 'Identified',
+            headerStyle: {
+              height: 70,
+              backgroundColor: '#EE4733',
+              elevation: 3
+            }
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -12,7 +12,7 @@ const CameraControls = ({ typeFromProps, setType, navigation }) => {
         <Icon name="camera" size={50} color="#a4a2aa"/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.tabItem}>
-        <Icon name="menu" size={40} color="#a4a2aa"/>
+        <Icon name="more-horiz" size={50} color="#a4a2aa"/>
       </TouchableOpacity>
 
       {/*<TouchableOpacity*/}
