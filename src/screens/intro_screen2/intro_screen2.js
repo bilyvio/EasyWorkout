@@ -9,7 +9,7 @@ const Intro2 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.navBar}/>
-      <Image source={require('/assets/images/back2.png')} style={{width: '100%', height: '100%'}} />
+      <Image source={require('../../../assets/images/back2.png')} style={{width: '100%', height: '100%'}} />
       <Text style={styles.textBar}>Have a good health</Text>
       <Text style={styles.lowTextBar}>
         <Text> Warning! {"\n"}</Text>
