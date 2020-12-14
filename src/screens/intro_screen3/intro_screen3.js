@@ -25,7 +25,7 @@ const Intro3 = ({ navigation }) => {
         {"\n"}in the menu.
       </Text>
       <IntroButton3
-        onPress={() => navigation.navigate('Intro3')}
+        onPress={() => navigation.navigate('Camera')}
         title="Go to camera"
       />
     </View>
