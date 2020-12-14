@@ -15,7 +15,7 @@ import { useFocusEffect } from '@react-navigation/core';
 
 const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
-  const DETAILS_NAVIGATION_TIMEOUT = 10000;
+  const DETAILS_NAVIGATION_TIMEOUT = 90000;
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [isVideoActive, setIsVideoActive] = useState(true);
 
