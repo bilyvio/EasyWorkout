@@ -30,6 +30,9 @@ const headerConfig = {
   },
 }
 
+import { CameraTitle } from './src/components/CameraTitle/styles';
+
+
 const customFonts = {
   QuicksandBold: require('./assets/fonts/Quicksand-Bold.ttf'),
   QuicksandVariable: require('./assets/fonts/Quicksand-VariableFont_wght.ttf'),

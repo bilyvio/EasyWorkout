@@ -5,13 +5,11 @@ import {
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
 import { usePermissions } from 'expo-permissions';
+import { useFocusEffect } from '@react-navigation/core';
 import CameraControls from '../../components/cameraControls/CameraControls';
 import VideoComponent from '../../components/VideoComponent/VideoComponent';
 
 import styles from './styles';
-import { useFocusEffect } from '@react-navigation/core';
-
-
 
 const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
@@ -48,12 +46,9 @@ const CameraContainer = ({ navigation }) => {
     );
   }
 
-
-
-
   return (
     <View style={styles.flexContainer}>
-      {/*<Camera style={styles.flexContainer} type={type} />*/}
+      {/* <Camera style={styles.flexContainer} type={type} /> */}
       {isVideoActive && <VideoComponent />}
       <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
     </View>

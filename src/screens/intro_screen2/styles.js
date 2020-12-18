@@ -28,9 +28,8 @@ export const styles = StyleSheet.create({
   lowTextBar: {
     position: 'absolute',
     height: 200,
-    left: '1.6%',
-    right: '-2.67%',
     top: '67%',
+    padding: '10px',
     fontFamily: 'QuicksandBold',
     fontStyle: 'normal',
     fontWeight: 'normal',

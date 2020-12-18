@@ -8,7 +8,7 @@ export default StyleSheet.create({
   rightNav: {
     flexDirection: 'row'
   },
-  setColorWhite : {
+  setColorWhite: {
     color: '#FFFFFF'
   },
   backgroundVideo: {
@@ -22,7 +22,7 @@ export default StyleSheet.create({
     marginTop: 30,
     marginLeft: 25
   },
-  body:{
+  body: {
     flex: 1,
     marginTop: 5
   },
@@ -53,7 +53,7 @@ export default StyleSheet.create({
     marginTop: 20,
     fontFamily: 'QuicksandBold',
     fontStyle: 'normal',
-    fontWeight:'bold',
+    fontWeight: 'bold',
     fontSize: 20,
     lineHeight: 25,
     color: '#707070',
@@ -64,17 +64,17 @@ export default StyleSheet.create({
     marginTop: 20,
     fontFamily: 'QuicksandBold',
     fontStyle: 'normal',
-    fontWeight:'bold',
+    fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 22.5,
     color: '#820E0E',
   },
-  descriptionText:{
+  descriptionText: {
     height: 20,
     marginLeft: 50,
     fontFamily: 'QuicksandBold',
     fontStyle: 'normal',
-    fontWeight:'normal',
+    fontWeight: 'normal',
     fontSize: 16,
     lineHeight: 20,
     color: '#707070',

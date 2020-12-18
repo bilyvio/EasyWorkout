@@ -23,16 +23,15 @@ export default function VideoComponent({ videoSrc }) {
   return (
     <View style={styles.container}>
       <Video
-        style={{ width: 416, height: 737,overflow: 'visible'}}
+        style={{ width: 416, height: 737, overflow: 'visible' }}
         source={videoSrc || LightVideo}
         rate={1.0}
         volume={1.0}
         isMuted={false}
         resizeMode="contain"
-        shouldPlay={true}
+        shouldPlay
         isLooping
       />
     </View>
   );
 }
-
