@@ -1,53 +1,33 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    alignItems: 'center',
+  },
   container: {
     flex: 1,
   },
-  navBar: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    left: 0,
-    top: 0,
-    backgroundColor: '#EE4733'
-  },
   textBar: {
-    position: 'absolute',
-    height: 31,
-    left: '32.53%',
-    right: '29.6%',
-    top: '6.6%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    top: '3%',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
-    lineHeight: 30,
     color: '#EE4733'
   },
   lowTextBar: {
-    position: 'absolute',
-    height: 100,
-    width: 300,
-    left: '18.83%',
-    right: '27.43%',
-    top: '43%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    justifyContent: 'center',
+    alignItems: 'center',
+    top: '40%',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
     lineHeight: 30,
     color: '#707070'
   },
   lowerTextBar: {
-    position: 'absolute',
-    height: 300,
-    left: '5%',
-    right: '-0%',
-    top: '53%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
+    top: '42%',
+    fontFamily: 'Quicksand_700Bold',
+    padding: 10,
     fontSize: 18,
     lineHeight: 22,
     display: 'flex',
@@ -56,11 +36,9 @@ export const styles = StyleSheet.create({
 
   },
   buttonBar: {
-    position: 'absolute',
     width: 320,
     height: 50,
-    left: 50,
-    top: '87%',
+    top: '46%',
     backgroundColor: '#EE4733',
     shadowColor: '#000',
     shadowOffset: {
@@ -69,23 +47,14 @@ export const styles = StyleSheet.create({
     },
     shadowOpacity: 0.37,
     shadowRadius: 2.84,
-    elevation: 5,
     justifyContent: 'center',
-    padding: 2,
+    alignItems: 'center',
     borderRadius: 90,
 
   },
   buttonText: {
-    position: 'absolute',
-    height: 25,
-    left: '28%',
-    right: '4.41%',
-    top: '30%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 20,
-    lineHeight: 25,
     color: '#FEFDFC',
   }
 });

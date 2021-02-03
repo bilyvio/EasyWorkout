@@ -17,26 +17,6 @@ const CameraContainer = ({ navigation }) => {
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [isVideoActive, setIsVideoActive] = useState(true);
 
-  useFocusEffect(
-    React.useCallback(() => {
-      // Do something when the screen is focused
-      setIsVideoActive(true);
-
-      const navigateTimeout = setTimeout(() => {
-        setIsVideoActive(false);
-        navigation.navigate('Details');
-      }, DETAILS_NAVIGATION_TIMEOUT);
-
-      return () => {
-        // Do something when the screen is unfocused
-        // Useful for cleanup functions
-
-        clearTimeout(navigateTimeout);
-        setIsVideoActive(false);
-      };
-    }, [])
-  );
-
   if (!permission || permission.status !== 'granted') {
     return (
       <View>

@@ -26,7 +26,7 @@ export default StyleSheet.create({
     left: '37.33%',
     right: '-49.07%',
     top: 47,
-    fontFamily: 'QuicksandBold',
+    fontFamily: 'Quicksand_700Bold',
   },
   navItem: {
     marginTop: 30,
