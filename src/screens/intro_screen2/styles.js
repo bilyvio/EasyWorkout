@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     height: 200,
     top: '67%',
-    padding: '10px',
+    padding: 10,
     fontFamily: 'QuicksandBold',
     fontStyle: 'normal',
     fontWeight: 'normal',

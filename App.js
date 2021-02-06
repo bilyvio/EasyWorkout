@@ -31,6 +31,8 @@ const headerConfig = {
 }
 
 import { CameraTitle } from './src/components/CameraTitle/styles';
+import { Settings } from 'react-native-web';
+import Settings_component from './src/screens/settings_screen/settings_screen';
 
 
 const customFonts = {
@@ -55,7 +57,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Intro" component={Intro} options={{headerShown: false}}/>
+        {/*<Stack.Screen name="Intro" component={Intro} options={{headerShown: false}}/>
         <Stack.Screen name="Intro2" component={Intro2} options={{headerShown: false}}/>
         <Stack.Screen name="Intro3" component={Intro3} options={{headerShown: false}}/>
         <Stack.Screen
@@ -67,6 +69,17 @@ export default function App() {
           name="Details"
           component={Details}
           options={{...headerConfig, title: 'Identified',
+            headerStyle: {
+              height: 90,
+              backgroundColor: '#EE4733',
+              elevation: 3
+            }
+          }}
+        />*/}
+        <Stack.Screen
+          name="Camera"
+          component={Settings_component}
+          options={{...headerConfig, title: 'Settings',
             headerStyle: {
               height: 90,
               backgroundColor: '#EE4733',
