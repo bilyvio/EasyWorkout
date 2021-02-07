@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Text, View, Image, Button, TouchableOpacity
 } from 'react-native';
@@ -16,10 +16,12 @@ const customFonts = {
 const Settings_component = ({ navigation }) => {
   const [loaded] = useFonts(customFonts);
   const state = {
-    isOnDefaultToggleSwitch: true,
+    isOnDefaultToggleSwitch: false,
     isOnLargeToggleSwitch: false,
     isOnBlueToggleSwitch: false
   };
+  const [isSwitchEnabled, setSwitch] = useState(false)
+
 
   function onToggle(isOn) {
     console.log("Changed to " + isOn);
@@ -38,7 +40,7 @@ const Settings_component = ({ navigation }) => {
         </TouchableOpacity>
       </View>
       <ToggleSwitch
-        isOn={false}
+        isOn={isSwitchEnabled}
         onColor="#EE4733"
         offColor="#A4A2AA"
         label="Reminders"
@@ -52,7 +54,8 @@ const Settings_component = ({ navigation }) => {
           left: "10%"
         }}
         size="large"
-        onToggle={isOn => console.log("changed to : ", isOn)}
+        onToggle={value => setSwitch(value)}
+
       />
 
 

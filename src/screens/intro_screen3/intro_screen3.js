@@ -10,7 +10,7 @@ const Intro3 = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.navBar} />
-      <Image source={require('../../../assets/images/back3.png')} style={{ width: '100%', height: '100%' }} />
+      <Image source={require('../../../assets/images/intro3_mockup_red.png')} style={{ width: '100%', height: '100%' }} />
       <Text style={styles.textBar}>How to use</Text>
       <Text style={styles.lowTextBar}>
         <Text>
