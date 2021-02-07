@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {
-  View, Text, Button, Dimensions
+  View, Text, Button, Dimensions,SafeAreaView
 } from 'react-native';
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
@@ -28,6 +28,11 @@ const CameraContainer = ({ navigation }) => {
 
   return (
     <View style={styles.flexContainer}>
+      <View style={styles.navBar}>
+        <Text style={styles.sectionTitle}>
+          Scan the simulator
+        </Text>
+      </View>
       {/* <Camera style={styles.flexContainer} type={type} /> */}
       {isVideoActive && <VideoComponent />}
       <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
