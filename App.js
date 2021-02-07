@@ -4,9 +4,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Intro from './src/screens/intro_screen1/intro_screen1';
 import Intro2 from './src/screens/intro_screen2/intro_screen2';
 import Intro3 from './src/screens/intro_screen3/intro_screen3';
-import Video_Screen from './src/screens/video_screen/video_screen';
 import CameraContainer from './src/screens/camera_screen/camera_screen';
 import Details from './src/screens/video_screen/video_screen';
+import Settings_component from './src/screens/settings_screen/settings_screen';
+
 import {useFonts, Quicksand_700Bold,Quicksand_500Medium} from "@expo-google-fonts/quicksand";
 
 const headerConfig = {
@@ -21,8 +22,6 @@ const headerConfig = {
   headerTitleStyle: {
     top: '5%',
     fontFamily: 'Quicksand_700Bold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
     fontSize: 23,
     lineHeight: 25,
     color: '#FFFFFF',
@@ -68,6 +67,17 @@ export default function App() {
                   elevation: 3
                 }
               }}
+          />
+          <Stack.Screen
+            name="settings"
+            component={Settings_component}
+            options={{...headerConfig, title: 'Settings',
+              headerStyle: {
+                height: 90,
+                backgroundColor: '#EE4733',
+                elevation: 3
+              }
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

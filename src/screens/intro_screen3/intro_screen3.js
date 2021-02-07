@@ -10,7 +10,7 @@ const Intro3 = ({ navigation }) => {
 
   return (
       <View style={styles.container}>
-          <ImageBackground source={require('../../../assets/images/back3.png')} style={styles.image}>
+          <ImageBackground source={require('../../../assets/images/intro3_mockup_red.png')} style={styles.image}>
               <Text style={styles.textBar}>How to use</Text>
                   <Text style={styles.lowTextBar}>Welcome to</Text>
                   <Text style={styles.lowTextBar}>EasyWorkout Application!</Text>

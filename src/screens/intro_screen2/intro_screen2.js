@@ -8,7 +8,7 @@ import IntroButton2 from '../../components/IntroButton2';
 const Intro2 = ({ navigation }) => {
   return (
       <View style={styles.container}>
-      <ImageBackground source={require('../../../assets/images/back2.png')} style={styles.image}>
+      <ImageBackground source={require('../../../assets/images/intro2_mockup_red.png')} style={styles.image}>
           <Text style={styles.textBar}>Have a good health</Text>
           <Text style={styles.lowTextBar}>
               <Text>

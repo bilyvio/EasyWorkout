@@ -34,6 +34,7 @@
     "react-native-vector-icons": "^7.1.0",
     "react-native-view-more-text": "^2.1.0",
     "react-native-web": "~0.13.12",
+    "toggle-switch-react-native": "^2.3.0",
     "yarn": "^1.22.10"
   },
   "devDependencies": {

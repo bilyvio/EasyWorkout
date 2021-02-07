@@ -11,7 +11,7 @@ import {
 const Intro = ({ navigation }) => {
   return (
       <SafeAreaView style={styles.container}>
-          <ImageBackground source={require('../../../assets/images/back1.png')} style={styles.image}>
+          <ImageBackground source={require('../../../assets/images/intro1_mockup_red.png')} style={styles.image}>
               <Text style={styles.titleBar}>EasyWorkout</Text>
               <Text style={styles.textBar}>Being healthy is all, no health is nothing. </Text>
               <Text style={styles.textBar}>So why do not we start?</Text>
