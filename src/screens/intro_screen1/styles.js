@@ -4,8 +4,6 @@ export const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    justifyContent: "flex-end",
-    alignItems: 'center',
   },
   container: {
     flex: 1,
@@ -13,21 +11,29 @@ export const styles = StyleSheet.create({
   titleBar: {
     color: "#FFFFFF",
     fontSize: 49,
-    bottom: '11%',
-    fontFamily: 'Quicksand_700Bold'
+    fontFamily: 'Quicksand_700Bold',
+    marginBottom: '3%'
   },
   textBar: {
     fontSize: 16,
     lineHeight: 27,
     color: '#FFFFFF',
-    bottom: '11%',
     fontFamily: 'Quicksand_500Medium'
+  },
+  textView: {
+    height: '82.5%',
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  buttonView: {
+    height: '17.5%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonBar: {
     width: 320,
     height: 50,
     backgroundColor: '#FFFFFF',
-    bottom: '3%',
     borderRadius: 90,
     justifyContent: 'center',
     alignItems:'center',
