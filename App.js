@@ -20,7 +20,6 @@ const headerConfig = {
   headerTintColor: '#fff',
   headerTitleAlign: 'center',
   headerTitleStyle: {
-    top: '5%',
     fontFamily: 'Quicksand_700Bold',
     fontSize: 23,
     lineHeight: 25,
@@ -49,7 +48,7 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator>
-          {/*<Stack.Screen name="Intro" component={Intro} options={{headerShown: false}}/>
+          <Stack.Screen name="Intro" component={Intro} options={{headerShown: false}}/>
           <Stack.Screen name="Intro2" component={Intro2} options={{headerShown: false}}/>
           <Stack.Screen name="Intro3" component={Intro3} options={{headerShown: false}}/>
           <Stack.Screen
@@ -67,7 +66,7 @@ export default function App() {
                   elevation: 3
                 }
               }}
-          />*/}
+          />
           <Stack.Screen
             name="settings"
             component={Settings_component}

@@ -3,34 +3,42 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   image: {
     flex: 1,
-    resizeMode: "cover",
-    alignItems: 'center',
+    resizeMode: "cover"
   },
   container: {
     flex: 1,
   },
+  titleView: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '7.5%'
+  },
   textBar: {
-    height: 30,
-    top: '7%',
-    alignItems:'center',
     fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
     lineHeight: 30,
     color: '#CC3913'
   },
   lowTextBar: {
-    top: '63%',
     fontFamily: 'Quicksand_700Bold',
-    padding: 10,
     fontSize: 16,
     lineHeight: 20,
-    alignItems: 'center',
     color: '#FFFFFF',
+  },
+  textView: {
+    paddingLeft: '1%',
+    height: '75%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  buttonView: {
+    height: '17.5%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonBar: {
     width: 320,
     height: 50,
-    top:'65%',
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems:'center',

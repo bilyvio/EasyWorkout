@@ -4,41 +4,52 @@ export const styles = StyleSheet.create({
   image: {
     flex: 1,
     resizeMode: "cover",
-    alignItems: 'center',
   },
   container: {
     flex: 1,
   },
+  titleView: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '7.5%'
+  },
+
+  textView: {
+    height: '75%',
+    justifyContent: 'flex-end',
+  },
+  highTextView: {
+    alignItems: 'center',
+    marginBottom: '5%',
+  },
+  lowTextView: {
+    paddingLeft: '2%'
+  },
+  buttonView: {
+    height: '17.5%',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
   textBar: {
-    top: '3%',
     fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
     color: '#EE4733'
   },
   lowTextBar: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    top: '40%',
     fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
     lineHeight: 30,
     color: '#707070'
   },
   lowerTextBar: {
-    top: '42%',
     fontFamily: 'Quicksand_700Bold',
-    padding: 10,
     fontSize: 18,
-    lineHeight: 22,
-    display: 'flex',
-    alignItems: 'center',
+    lineHeight: 21,
     color: '#DE4922',
-
   },
   buttonBar: {
     width: 320,
     height: 50,
-    top: '46%',
     backgroundColor: '#EE4733',
     shadowColor: '#000',
     shadowOffset: {

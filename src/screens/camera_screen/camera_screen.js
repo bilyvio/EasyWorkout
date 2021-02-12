@@ -27,7 +27,7 @@ const CameraContainer = ({ navigation }) => {
   }
 
   return (
-    <View style={styles.flexContainer}>
+    <View style={{flex: 1}}>
       {/* <Camera style={styles.flexContainer} type={type} /> */}
       {isVideoActive && <VideoComponent />}
       <CameraControls navigation={navigation}/>
