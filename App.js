@@ -29,8 +29,17 @@ const headerConfig = {
 }
 
 import { CameraTitle } from './src/components/CameraTitle/styles';
+import {Drawer_Content} from './src/components/Drawer_Content/Drawer_Content'
+import {createDrawerNavigator} from "@react-navigation/drawer";
 
-
+const Drawer = createDrawerNavigator();
+function CameraScreen({ navigation }) {
+  return (
+      <Drawer.Navigator drawerContent={props => <Drawer_Content {...props} />}>
+        <Drawer.Screen name="WorkOut" component={CameraContainer}/>
+      </Drawer.Navigator>
+  );
+}
 
 const Stack = createStackNavigator();
 
@@ -53,8 +62,8 @@ export default function App() {
           <Stack.Screen name="Intro3" component={Intro3} options={{headerShown: false}}/>
           <Stack.Screen
               name="Camera"
-              component={CameraContainer}
-              options={{...headerConfig, headerLeft: null}}
+              component={CameraScreen}
+              options={{headerShown: false}}
           />
           <Stack.Screen
               name="Details"
