@@ -42,6 +42,12 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 22,
   },
+  themeName:{
+    color: "#707070",
+    fontFamily: "Quicksand_500Medium",
+    fontSize: 18,
+    lineHeight: 22,
+  },
   settingsRow:{
     paddingTop: '3%',
     paddingBottom: '5%',
@@ -52,5 +58,18 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 0.5,
     borderColor: '#a6a6a6'
+  },
+  themeLineView:{
+    marginTop: '5%',
+    marginLeft: '22%',
+    justifyContent:'space-between',
+    flexDirection: 'row'
+  },
+  circle: {
+    width: 20,
+    height: 20,
+    borderRadius: 20 / 2,
+    backgroundColor: '#EE4733',
+    marginLeft: '45%',
   }
 });

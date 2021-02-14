@@ -7,8 +7,6 @@ import { Entypo, FontAwesome } from '@expo/vector-icons';
 import ToggleSwitch from 'toggle-switch-react-native'
 import DropDownPicker from 'react-native-dropdown-picker';
 import DropDownItem from 'react-native-drop-down-item'
-import AnimatedEvent from 'react-native-web/dist/vendor/react-native/Animated/AnimatedEvent';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 
 
 
@@ -20,13 +18,8 @@ const Settings_component = ({ navigation }) => {
   const IC_ARR_DOWN = require('../../../assets/icons/ic_arr_down.png');
   const IC_ARR_UP = require('../../../assets/icons/ic_arr_up.png');
 
-  const state = {
-    contents: [
-      {
-        title: "Title 1",
-        body: "Hi. I love this component. What do you think?"
-      },
-    ]
+  const Circle = ({style, color}) => {
+    return <View style={{...style.circle, backgroundColor: color}}/>;
   };
 
   return (
@@ -121,20 +114,25 @@ const Settings_component = ({ navigation }) => {
             }
           >
             <Animated.View>
-              <TouchableOpacity>
-                <Text>blood</Text>
+              <TouchableOpacity style={styles.themeLineView}>
+                <Text style={styles.themeName}>blood</Text>
+                <Circle style={styles} color={'#EE4733'}/>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Text>orange</Text>
+              <TouchableOpacity style={styles.themeLineView}>
+                <Text style={styles.themeName}>orange</Text>
+                <Circle style={styles} color={'#FF773D'}/>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Text>honey</Text>
+              <TouchableOpacity style={styles.themeLineView}>
+                <Text style={styles.themeName}>honey</Text>
+                <Circle style={styles} color={'#FEE599'}/>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Text>mint</Text>
+              <TouchableOpacity style={styles.themeLineView}>
+                <Text style={styles.themeName}>mint</Text>
+                <Circle style={styles} color={'#00E682'}/>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <Text>unicorn</Text>
+              <TouchableOpacity style={styles.themeLineView}>
+                <Text style={styles.themeName}>unicorn</Text>
+                <Circle style={styles} color={'#4634A7'}/>
               </TouchableOpacity>
             </Animated.View>
           </DropDownItem>
