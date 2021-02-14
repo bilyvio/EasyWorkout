@@ -41,6 +41,16 @@ export const styles = StyleSheet.create({
     fontFamily: "Quicksand_700Bold",
     fontSize: 18,
     lineHeight: 22,
-    left: "10%"
+  },
+  settingsRow:{
+    paddingTop: '3%',
+    paddingBottom: '5%',
+    marginLeft: '5%',
+    marginRight: '5%',
+    justifyContent:'space-between',
+    alignItems: 'center',
+    flexDirection: 'row',
+    borderBottomWidth: 0.5,
+    borderColor: '#a6a6a6'
   }
 });
