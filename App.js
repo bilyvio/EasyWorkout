@@ -8,7 +8,7 @@ import Intro2 from './src/screens/intro_screen2/intro_screen2';
 import Intro3 from './src/screens/intro_screen3/intro_screen3';
 import CameraContainer from './src/screens/camera_screen/camera_screen';
 import Details from './src/screens/video_screen/video_screen';
-import Settings_component from './src/screens/settings_screen/settings_screen';
+import SettingsComponent from './src/screens/settings_screen/settings_screen';
 
 import { CameraTitle } from './src/components/CameraTitle/styles';
 import { Drawer_Content } from './src/components/Drawer_Content/Drawer_Content';
@@ -55,30 +55,30 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/*<Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen*/}
-        {/*  name="Camera"*/}
-        {/*  component={CameraScreen}*/}
-        {/*  options={{ headerShown: false }}*/}
-        {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="Details"*/}
-        {/*  component={Details}*/}
-        {/*  options={{*/}
-        {/*    ...headerConfig,*/}
-        {/*    title: 'Identified',*/}
-        {/*    headerStyle: {*/}
-        {/*      height: 90,*/}
-        {/*      backgroundColor: '#EE4733',*/}
-        {/*      elevation: 3*/}
-        {/*    }*/}
-        {/*  }}*/}
-        {/*/>*/}
+        {/* <Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} /> */}
+        {/* <Stack.Screen */}
+        {/*  name="Camera" */}
+        {/*  component={CameraScreen} */}
+        {/*  options={{ headerShown: false }} */}
+        {/* /> */}
+        {/* <Stack.Screen */}
+        {/*  name="Details" */}
+        {/*  component={Details} */}
+        {/*  options={{ */}
+        {/*    ...headerConfig, */}
+        {/*    title: 'Identified', */}
+        {/*    headerStyle: { */}
+        {/*      height: 90, */}
+        {/*      backgroundColor: '#EE4733', */}
+        {/*      elevation: 3 */}
+        {/*    } */}
+        {/*  }} */}
+        {/* /> */}
         <Stack.Screen
           name="settings"
-          component={Settings_component}
+          component={SettingsComponent}
           options={{
             ...headerConfig,
             title: 'Settings',
