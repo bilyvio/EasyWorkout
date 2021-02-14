@@ -29,6 +29,7 @@ const headerConfig = {
 }
 
 import { CameraTitle } from './src/components/CameraTitle/styles';
+import Sup from "./src/screens/support_screen/support_screen";
 
 
 
@@ -48,6 +49,7 @@ export default function App() {
   return (
       <NavigationContainer>
         <Stack.Navigator>
+          <Stack.Screen name="Sup" component={Sup} options={{headerShown: false}}/>
           <Stack.Screen name="Intro" component={Intro} options={{headerShown: false}}/>
           <Stack.Screen name="Intro2" component={Intro2} options={{headerShown: false}}/>
           <Stack.Screen name="Intro3" component={Intro3} options={{headerShown: false}}/>
