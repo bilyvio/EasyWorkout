@@ -52,5 +52,16 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     borderBottomWidth: 0.5,
     borderColor: '#a6a6a6'
+  },
+  languagesRow:{
+    top: '10%',
+    paddingTop: '1%',
+    paddingBottom: '1%',
+    marginLeft: '5%',
+    marginRight: '15%',
+    justifyContent:'space-between',
+    alignItems: 'flex-end',
+    flexDirection: 'column',
   }
 });
+
