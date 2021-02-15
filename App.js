@@ -1,8 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts, Quicksand_700Bold, Quicksand_500Medium } from '@expo-google-fonts/quicksand';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { LogBox } from 'react-native';
 import Intro from './src/screens/intro_screen1/intro_screen1';
 import Intro2 from './src/screens/intro_screen2/intro_screen2';
 import Intro3 from './src/screens/intro_screen3/intro_screen3';
@@ -49,8 +50,11 @@ const MyTheme = {
   },
 };
 
-
 export default function App() {
+
+  useEffect(() => {
+    LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
+  }, []);
 
   const [loaded] = useFonts({ Quicksand_500Medium, Quicksand_700Bold });
   const [isVideoActive, setIsVideoActive] = useState(true);
