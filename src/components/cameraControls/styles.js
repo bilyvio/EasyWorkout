@@ -7,15 +7,17 @@ export default StyleSheet.create({
     height: 73,
     borderTopWidth: 0.5,
     borderColor: '#E5E5E5',
-    paddingHorizontal: 25,
+    paddingHorizontal: '5%',
     flexDirection: 'row',
     alignItems: 'center',
-    // display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'flex-end'
+  },
+  camera: {
+    marginRight: '31.50%'
+  },
+  menu: {
   },
   tabItem: {
-    height: 80,
-    alignItems: 'center',
     justifyContent: 'center'
   },
 });

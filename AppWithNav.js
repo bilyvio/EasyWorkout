@@ -13,7 +13,7 @@ import Details from './src/screens/video_screen/video_screen';
 import SettingsComponent from './src/screens/settings_screen/settings_screen';
 
 import { CameraTitle } from './src/components/CameraTitle/styles';
-import Sup from './src/screens/support_screen/support_screen';
+import Support from './src/screens/support_screen/support_screen';
 import { Drawer_Content } from './src/components/Drawer_Content/Drawer_Content';
 
 const headerConfig = {
@@ -68,7 +68,7 @@ export default function AppWithNav() {
         <Stack.Screen
           name="Camera"
           component={CameraScreen}
-          options={{ ...headerConfig, headerLeft: null }}
+          options={{ headerShown: false }}
         />
         <Stack.Screen
           name="Details"
@@ -83,7 +83,7 @@ export default function AppWithNav() {
             }
           }}
         />
-        <Stack.Screen name="Sup" component={Sup} options={{ headerShown: false }} />
+        <Stack.Screen name="Sup" component={Support} options={{ headerShown: false }} />
         <Stack.Screen
           name="settings"
           component={SettingsComponent}
