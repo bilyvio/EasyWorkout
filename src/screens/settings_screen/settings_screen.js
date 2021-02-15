@@ -8,6 +8,7 @@ import DropDownItem from 'react-native-drop-down-item';
 import { Picker } from 'react-native-web';
 import AnimatedEvent from 'react-native-web/dist/vendor/react-native/Animated/AnimatedEvent';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import { ThemeContext } from '../../components/theme-context';
 import { styles } from './styles';
 
 const SettingsComponent = ({ navigation }) => {
@@ -18,31 +19,11 @@ const SettingsComponent = ({ navigation }) => {
   const IC_ARR_DOWN = require('../../../assets/icons/ic_arr_down.png');
   const IC_ARR_UP = require('../../../assets/icons/ic_arr_up.png');
 
-  const [theme, setTheme] = useState('red');
+  const {
+    theme, bgThemeColor, fontThemeColor, changeTheme
+  } = React.useContext(ThemeContext);
 
-  const THEME_BG_COLORS = {
-    white: '#fff',
-    black: '#000',
-    red: '#EE4733',
-  };
-
-  const THEME_FONT_COLORS = {
-    white: '#000',
-    black: '#fff',
-    red: '#fff',
-  };
-
-  useEffect(() => {
-    document.documentElement.style.setProperty(
-      '--theme-color-bg',
-      THEME_BG_COLORS[theme]
-    );
-
-    document.documentElement.style.setProperty(
-      '--theme-color-font',
-      THEME_FONT_COLORS[theme]
-    );
-  }, [THEME_BG_COLORS, THEME_FONT_COLORS, theme]);
+  console.log(bgThemeColor, fontThemeColor);
 
   return (
     <View style={styles.container}>
@@ -77,7 +58,7 @@ const SettingsComponent = ({ navigation }) => {
       <Picker
         selectedValue={theme}
         style={{ height: 50, width: 100 }}
-        onValueChange={(itemValue) => setTheme(itemValue)}
+        onValueChange={(itemValue) => changeTheme(itemValue)}
       >
         <Picker.Item label="Red" value="red" />
         <Picker.Item label="White" value="white" />
