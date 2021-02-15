@@ -12,8 +12,8 @@ const CameraControls = ({ typeFromProps, setType, navigation }) => {
       <TouchableOpacity style={styles.tabItem}>
         <Icon name="camera" size={50} color="#a4a2aa" />
       </TouchableOpacity>
-      <TouchableOpacity style={styles.tabItem} onPress={() => navigation.navigate('settings')}>
-        <Icon name="menu" size={40} color="#a4a2aa"/>
+      <TouchableOpacity style={styles.tabItem} onPress={() => navigation.openDrawer()}>
+        <Icon name="menu" size={40} color="#a4a2aa" />
       </TouchableOpacity>
 
       {/* <TouchableOpacity */}
