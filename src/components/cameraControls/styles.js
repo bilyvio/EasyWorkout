@@ -11,7 +11,6 @@ export default StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     // display: 'flex',
-    minWidth: '40px',
     justifyContent: 'space-between'
   },
   tabItem: {
