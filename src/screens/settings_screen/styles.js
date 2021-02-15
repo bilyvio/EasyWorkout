@@ -9,8 +9,6 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     width: '100%',
     height: 100,
-    left: 0,
-    top: 0,
     backgroundColor: '#EE4733'
   },
   textBar: {
@@ -49,7 +47,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
   },
   settingsRow:{
-    paddingTop: '3%',
+    paddingTop: '5%',
     paddingBottom: '5%',
     marginLeft: '5%',
     marginRight: '5%',
@@ -60,7 +58,7 @@ export const styles = StyleSheet.create({
     borderColor: '#a6a6a6'
   },
   themeLineView:{
-    marginTop: '5%',
+    paddingTop: '5%',
     marginLeft: '22%',
     justifyContent:'space-between',
     flexDirection: 'row'
@@ -70,6 +68,6 @@ export const styles = StyleSheet.create({
     height: 20,
     borderRadius: 20 / 2,
     backgroundColor: '#EE4733',
-    marginLeft: '45%',
+    marginLeft: '65%',
   }
 });

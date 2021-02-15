@@ -8,6 +8,7 @@ import ToggleSwitch from 'toggle-switch-react-native'
 import DropDownPicker from 'react-native-dropdown-picker';
 import DropDownItem from 'react-native-drop-down-item'
 
+import colors from '../../constants/colors'
 
 
 const Settings_component = ({ navigation }) => {
@@ -28,27 +29,27 @@ const Settings_component = ({ navigation }) => {
         <Text style={styles.labelStyle}>Reminders</Text>
         <ToggleSwitch
           isOn={isSwitchEnabledReminders}
-          onColor="#EE4733"
+          onColor={colors.blood}
           offColor="#A4A2AA"
           size="large"
           onToggle={value => setSwitchReminders(value)}
         />
       </View>
-      <View style={{...styles.settingsRow, top:'30%'}}>
+      <View style={{...styles.settingsRow}}>
         <Text style={styles.labelStyle}>Connected     google calendar</Text>
         <ToggleSwitch
           isOn={isSwitchEnabledConnected}
-          onColor="#EE4733"
+          onColor={colors.blood}
           offColor="#A4A2AA"
           size="large"
           onToggle={value => setSwitchConnected(value)}
         />
       </View>
-      <View style={{...styles.settingsRow, top:'32%'}}>
+      <View style={{...styles.settingsRow}}>
         <Text style={styles.labelStyle}>Apple Health</Text>
         <ToggleSwitch
           isOn={isSwitchEnabledHealth}
-          onColor="#EE4733"
+          onColor={colors.blood}
           offColor="#A4A2AA"
           size="large"
           onToggle={value => setSwitchHealth(value)}
@@ -89,7 +90,7 @@ const Settings_component = ({ navigation }) => {
 
 
       {/*/>*/}
-      <View style={{...styles.settingsRow, top:'35%'}}>
+      <View style={{...styles.settingsRow}}>
         <ScrollView
           style={{ alignSelf: 'stretch' }}
           scrollEventThrottle={1} // <-- Use 1 here to make sure no events are ever missed
@@ -116,23 +117,25 @@ const Settings_component = ({ navigation }) => {
             <Animated.View>
               <TouchableOpacity style={styles.themeLineView}>
                 <Text style={styles.themeName}>blood</Text>
-                <Circle style={styles} color={'#EE4733'}/>
+                <Circle style={styles} color={colors.blood}/>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.themeLineView}>
+              <TouchableOpacity style={styles.themeLineView} onPress={()=>{
+
+              }}>
                 <Text style={styles.themeName}>orange</Text>
-                <Circle style={styles} color={'#FF773D'}/>
+                <Circle style={styles} color={colors.orange}/>
               </TouchableOpacity>
               <TouchableOpacity style={styles.themeLineView}>
                 <Text style={styles.themeName}>honey</Text>
-                <Circle style={styles} color={'#FEE599'}/>
+                <Circle style={styles} color={colors.honey}/>
               </TouchableOpacity>
               <TouchableOpacity style={styles.themeLineView}>
                 <Text style={styles.themeName}>mint</Text>
-                <Circle style={styles} color={'#00E682'}/>
+                <Circle style={styles} color={colors.mint}/>
               </TouchableOpacity>
               <TouchableOpacity style={styles.themeLineView}>
                 <Text style={styles.themeName}>unicorn</Text>
-                <Circle style={styles} color={'#4634A7'}/>
+                <Circle style={styles} color={colors.unicorn}/>
               </TouchableOpacity>
             </Animated.View>
           </DropDownItem>

@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { NavigationContainer } from '@react-navigation/native';
+import React, { useState, useRef } from 'react';
+import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts, Quicksand_700Bold, Quicksand_500Medium } from '@expo-google-fonts/quicksand';
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -41,11 +41,21 @@ function CameraScreen({ navigation }) {
 }
 
 const Stack = createStackNavigator();
+const MyTheme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primary: 'rgb(255, 45, 85)',
+  },
+};
+
 
 export default function App() {
 
   const [loaded] = useFonts({ Quicksand_500Medium, Quicksand_700Bold });
   const [isVideoActive, setIsVideoActive] = useState(true);
+
+  // const fadeAnim = useRef(new Animated.Value(0)).current;
 
   // @TODO add loading indicator instead of null here
   if (!loaded) {
@@ -55,27 +65,27 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {/*<Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} />*/}
-        {/*<Stack.Screen*/}
-        {/*  name="Camera"*/}
-        {/*  component={CameraScreen}*/}
-        {/*  options={{ headerShown: false }}*/}
-        {/*/>*/}
-        {/*<Stack.Screen*/}
-        {/*  name="Details"*/}
-        {/*  component={Details}*/}
-        {/*  options={{*/}
-        {/*    ...headerConfig,*/}
-        {/*    title: 'Identified',*/}
-        {/*    headerStyle: {*/}
-        {/*      height: 90,*/}
-        {/*      backgroundColor: '#EE4733',*/}
-        {/*      elevation: 3*/}
-        {/*    }*/}
-        {/*  }}*/}
-        {/*/>*/}
+        <Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />
+        <Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} />
+        <Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} />
+        <Stack.Screen
+          name="Camera"
+          component={CameraScreen}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            ...headerConfig,
+            title: 'Identified',
+            headerStyle: {
+              height: 90,
+              backgroundColor: '#EE4733',
+              elevation: 3
+            }
+          }}
+        />
         <Stack.Screen
           name="settings"
           component={Settings_component}
