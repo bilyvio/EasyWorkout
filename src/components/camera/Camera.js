@@ -5,7 +5,7 @@ import {
 import { Camera } from 'expo-camera';
 import * as Permissions from 'expo-permissions';
 import { usePermissions } from 'expo-permissions';
-import CameraControls from '../../components/cameraControls/CameraControls';
+import CameraControls from '../cameraControls/CameraControls';
 
 import styles from './styles';
 

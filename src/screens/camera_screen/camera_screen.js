@@ -19,24 +19,19 @@ const CameraContainer = ({ navigation }) => {
 
   if (!permission || permission.status !== 'granted') {
     return (
-        <View>
-          <Text>Permission is not granted</Text>
-          <Button title="Grant permission" onPress={askForPermission} />
-        </View>
+      <View>
+        <Text>Permission is not granted</Text>
+        <Button title="Grant permission" onPress={askForPermission} />
+      </View>
     );
   }
 
   return (
-      <View style={styles.flexContainer}>
-          <View style={styles.navBar}>
-              <Text style={styles.sectionTitle}>
-                  Scan the simulator
-              </Text>
-          </View>
-          {/* <Camera style={styles.flexContainer} type={type} /> */}
-          {isVideoActive && <VideoComponent />}
-          <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
-      </View>
+    <View style={styles.flexContainer}>
+      {/* <Camera style={styles.flexContainer} type={type} /> */}
+      {isVideoActive && <VideoComponent />}
+      <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
+    </View>
   );
 };
 

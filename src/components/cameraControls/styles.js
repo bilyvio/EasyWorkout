@@ -9,14 +9,14 @@ export default StyleSheet.create({
     borderColor: '#E5E5E5',
     paddingHorizontal: 25,
     flexDirection: 'row',
-    alignItems: 'flex-end',
+    alignItems: 'center',
     // display: 'flex',
-    justifyContent: 'space-evenly'
+    minWidth: '40px',
+    justifyContent: 'space-between'
   },
   tabItem: {
     height: 80,
-    left: '84%',
     alignItems: 'center',
     justifyContent: 'center'
-  }
+  },
 });
