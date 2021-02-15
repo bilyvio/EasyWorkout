@@ -19,9 +19,7 @@ export default StyleSheet.create({
 
   sectionTitle: {
     top: '5%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 23,
     lineHeight: 25,
     color: '#FFFFFF',

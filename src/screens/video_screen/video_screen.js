@@ -1,4 +1,3 @@
-import { useFonts } from 'expo-font';
 import React, { useState } from 'react';
 import {
   Text, View, TouchableOpacity
@@ -9,14 +8,10 @@ import { Video } from 'expo-av';
 import ViewMoreText from 'react-native-view-more-text';
 import LightVideo from '../../../assets/videos/butterfly.mp4';
 import styles from './styles';
-
-const customFonts = {
-  QuicksandBold: require('../../../assets/fonts/Quicksand-Bold.ttf'),
-  QuicksandVariable: require('../../../assets/fonts/Quicksand-VariableFont_wght.ttf'),
-};
+import {useFonts,Quicksand_700Bold,Quicksand_500Medium} from "@expo-google-fonts/quicksand";
 
 const Details = () => {
-  const [loaded] = useFonts(customFonts);
+  const [loaded] = useFonts({Quicksand_700Bold,Quicksand_500Medium});
   const [isVideoActive, setIsVideoActive] = useState(true);
 
   // @TODO add loading indicator instead of null here

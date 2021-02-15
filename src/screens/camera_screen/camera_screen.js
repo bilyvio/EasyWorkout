@@ -17,41 +17,26 @@ const CameraContainer = ({ navigation }) => {
   const [type, setType] = useState(Camera.Constants.Type.back);
   const [isVideoActive, setIsVideoActive] = useState(true);
 
-  useFocusEffect(
-    React.useCallback(() => {
-      // Do something when the screen is focused
-      setIsVideoActive(true);
-
-      const navigateTimeout = setTimeout(() => {
-        setIsVideoActive(false);
-        navigation.navigate('Details');
-      }, DETAILS_NAVIGATION_TIMEOUT);
-
-      return () => {
-        // Do something when the screen is unfocused
-        // Useful for cleanup functions
-
-        clearTimeout(navigateTimeout);
-        setIsVideoActive(false);
-      };
-    }, [])
-  );
-
   if (!permission || permission.status !== 'granted') {
     return (
-      <View>
-        <Text>Permission is not granted</Text>
-        <Button title="Grant permission" onPress={askForPermission} />
-      </View>
+        <View>
+          <Text>Permission is not granted</Text>
+          <Button title="Grant permission" onPress={askForPermission} />
+        </View>
     );
   }
 
   return (
-    <View style={styles.flexContainer}>
-      {/* <Camera style={styles.flexContainer} type={type} /> */}
-      {isVideoActive && <VideoComponent />}
-      <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
-    </View>
+      <View style={styles.flexContainer}>
+          <View style={styles.navBar}>
+              <Text style={styles.sectionTitle}>
+                  Scan the simulator
+              </Text>
+          </View>
+          {/* <Camera style={styles.flexContainer} type={type} /> */}
+          {isVideoActive && <VideoComponent />}
+          <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
+      </View>
   );
 };
 

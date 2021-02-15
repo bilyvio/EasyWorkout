@@ -1,67 +1,52 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+  image: {
+    flex: 1,
+    resizeMode: "cover"
+  },
   container: {
     flex: 1,
   },
-  navBar: {
-    position: 'absolute',
-    width: '100%',
-    height: '100%',
-    left: 0,
-    top: 0,
-    backgroundColor: '#EE4733'
+  titleView: {
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    height: '7.5%'
   },
   textBar: {
-    position: 'absolute',
-    height: 30,
-    left: '21%',
-    right: '0%',
-    top: '7%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 24,
     lineHeight: 30,
     color: '#CC3913'
   },
   lowTextBar: {
-    position: 'absolute',
-    height: 200,
-    top: '67%',
-    padding: '10px',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 16,
     lineHeight: 20,
-    display: 'flex',
-    alignItems: 'center',
     color: '#FFFFFF',
-
+  },
+  textView: {
+    paddingLeft: '1%',
+    height: '75%',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
+  buttonView: {
+    height: '17.5%',
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   buttonBar: {
-    position: 'absolute',
     width: 320,
     height: 50,
-    left: 50,
-    top: '87%',
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
-    padding: 2,
+    alignItems:'center',
     borderRadius: 90,
   },
   buttonText: {
-    position: 'absolute',
-    height: 25,
-    left: '41%',
-    right: '4.41%',
-    top: '30%',
-    fontFamily: 'QuicksandBold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
+    fontFamily: 'Quicksand_700Bold',
     fontSize: 20,
-    lineHeight: 25,
     color: '#EC7E61',
   }
 });
