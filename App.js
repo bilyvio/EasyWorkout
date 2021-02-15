@@ -84,8 +84,11 @@ export default function App() {
             title: 'Settings',
             headerStyle: {
               height: 90,
-              backgroundColor: '#EE4733',
+              backgroundColor: 'var(--theme-color-bg)',
               elevation: 3
+            },
+            headerTitleStyle: {
+              color: 'var(--theme-color-font)',
             }
           }}
         />

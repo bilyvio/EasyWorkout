@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Text, View, Image, Button, TouchableOpacity, Switch, ScrollView, Animated
 } from 'react-native';
@@ -18,7 +18,31 @@ const SettingsComponent = ({ navigation }) => {
   const IC_ARR_DOWN = require('../../../assets/icons/ic_arr_down.png');
   const IC_ARR_UP = require('../../../assets/icons/ic_arr_up.png');
 
-  const [theme, setTheme] = useState('White');
+  const [theme, setTheme] = useState('red');
+
+  const THEME_BG_COLORS = {
+    white: '#fff',
+    black: '#000',
+    red: '#EE4733',
+  };
+
+  const THEME_FONT_COLORS = {
+    white: '#000',
+    black: '#fff',
+    red: '#fff',
+  };
+
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      '--theme-color-bg',
+      THEME_BG_COLORS[theme]
+    );
+
+    document.documentElement.style.setProperty(
+      '--theme-color-font',
+      THEME_FONT_COLORS[theme]
+    );
+  }, [THEME_BG_COLORS, THEME_FONT_COLORS, theme]);
 
   return (
     <View style={styles.container}>
@@ -32,7 +56,7 @@ const SettingsComponent = ({ navigation }) => {
         />
       </View>
       <View style={{ ...styles.settingsRow, top: '30%' }}>
-        <Text style={styles.labelStyle}>Connected     google calendar</Text>
+        <Text style={styles.labelStyle}>Connected google calendar</Text>
         <Switch
           value={isSwitchEnabledConnected}
           trackColor={{ false: '#767577', true: '#81b0ff' }}
@@ -55,8 +79,9 @@ const SettingsComponent = ({ navigation }) => {
         style={{ height: 50, width: 100 }}
         onValueChange={(itemValue) => setTheme(itemValue)}
       >
-        <Picker.Item label="White" value="White" />
-        <Picker.Item label="Black" value="Black" />
+        <Picker.Item label="Red" value="red" />
+        <Picker.Item label="White" value="white" />
+        <Picker.Item label="Black" value="black" />
       </Picker>
 
       {/* <DropDownPicker */}
