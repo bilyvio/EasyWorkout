@@ -5,20 +5,20 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'flex-start',
         marginLeft:27,
-        top: 80
+        top: 25
     },
 
     container1: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        top: 120,
+        top: 50,
     },
     container2: {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        top: 160,
+        top: 90,
     },
     input1: {
         width: '90%',
@@ -69,6 +69,6 @@ export const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        top: 400,
+        top: 300,
     },
 })

@@ -83,7 +83,18 @@ export default function AppWithNav() {
             }
           }}
         />
-        <Stack.Screen name="Support" component={Support} options={{ headerShown: false }} />
+        <Stack.Screen name="Support" component={Support} options={{
+            ...headerConfig,
+            title: 'Support',
+            headerStyle: {
+                height: 90,
+                backgroundColor: bgThemeColor,
+                elevation: 3
+            },
+            headerTitleStyle: {
+                color: fontThemeColor,
+            }
+        }} />
         <Stack.Screen
           name="settings"
           component={SettingsComponent}
