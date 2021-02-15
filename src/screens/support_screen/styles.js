@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
         height: 250,
         borderStyle: 'solid',
         borderRadius: 15,
-        borderColor: '#A4A2AA',
+        borderColor: '#a4a2aa',
         borderWidth: 1,
         fontFamily: 'Quicksand_700Bold',
         paddingHorizontal: 15,

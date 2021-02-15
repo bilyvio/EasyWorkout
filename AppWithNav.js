@@ -83,7 +83,7 @@ export default function AppWithNav() {
             }
           }}
         />
-        <Stack.Screen name="Sup" component={Support} options={{ headerShown: false }} />
+        <Stack.Screen name="Support" component={Support} options={{ headerShown: false }} />
         <Stack.Screen
           name="settings"
           component={SettingsComponent}

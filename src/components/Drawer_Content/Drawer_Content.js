@@ -39,7 +39,7 @@ export function Drawer_Content(props) {
                         <Text style={styles.buttonStyleText}>Setting</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyle}
-                                      onPress={() => props.navigation.navigate('Sup')}>
+                                      onPress={() => props.navigation.navigate('Support')}>
                         <View style={styles.icons}>
                             <Icon name="user-alt" size={30} color="#a4a2aa" />
                         </View>

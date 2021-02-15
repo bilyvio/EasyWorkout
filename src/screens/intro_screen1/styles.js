@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
   buttonView: {
     height: '17.5%',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   buttonBar: {
     width: 320,
