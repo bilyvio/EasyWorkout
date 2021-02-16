@@ -5,11 +5,11 @@ import {
 import { Entypo, FontAwesome } from '@expo/vector-icons';
 import DropDownPicker from 'react-native-dropdown-picker';
 import DropDownItem from 'react-native-drop-down-item';
-import { Picker } from 'react-native-web';
 import AnimatedEvent from 'react-native-web/dist/vendor/react-native/Animated/AnimatedEvent';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { ThemeContext } from '../../components/theme-context';
 import { styles } from './styles';
+import { Picker } from 'react-native'
 
 const SettingsComponent = ({ navigation }) => {
 
@@ -18,6 +18,7 @@ const SettingsComponent = ({ navigation }) => {
   const [isSwitchEnabledHealth, setSwitchHealth] = useState(false);
   const IC_ARR_DOWN = require('../../../assets/icons/ic_arr_down.png');
   const IC_ARR_UP = require('../../../assets/icons/ic_arr_up.png');
+  const [selectedLanguage, setLanguage] = useState("English");
 
   const {
     theme, bgThemeColor, fontThemeColor, changeTheme
@@ -36,7 +37,22 @@ const SettingsComponent = ({ navigation }) => {
           onValueChange={(value) => setSwitchReminders(value)}
         />
       </View>
-      <View style={{ ...styles.settingsRow, top: '30%' }}>
+      <View style={{...styles.settingsRow, top: '5%'}}>
+        <Text style={styles.labelStyle}>Languages</Text>
+      </View>
+      <View style={{...styles.languagesRow, top: '-15%'}}>
+        <Picker
+          selectedValue = {selectedLanguage}
+          style={{ height: 80, width: 100 }}
+          mode="dropdown"
+          onValueChange={(itemValue) => setLanguage(itemValue)}
+        >
+          <Picker.Item label="English" value="english" />
+          <Picker.Item label="Ukrainian" value="ukrainian" />
+          <Picker.Item label="Russian" value="russian" />
+        </Picker>
+      </View>
+      <View style={{ ...styles.settingsRow, top: '2%' }}>
         <Text style={styles.labelStyle}>Connected google calendar</Text>
         <Switch
           value={isSwitchEnabledConnected}
@@ -45,7 +61,7 @@ const SettingsComponent = ({ navigation }) => {
           onValueChange={(value) => setSwitchConnected(value)}
         />
       </View>
-      <View style={{ ...styles.settingsRow, top: '32%' }}>
+      <View style={{ ...styles.settingsRow, top: '6%' }}>
         <Text style={styles.labelStyle}>Apple Health</Text>
         <Switch
           value={isSwitchEnabledHealth}
@@ -54,16 +70,6 @@ const SettingsComponent = ({ navigation }) => {
           onValueChange={(value) => setSwitchHealth(value)}
         />
       </View>
-
-      <Picker
-        selectedValue={theme}
-        style={{ height: 50, width: 100 }}
-        onValueChange={(itemValue) => changeTheme(itemValue)}
-      >
-        <Picker.Item label="Red" value="red" />
-        <Picker.Item label="White" value="white" />
-        <Picker.Item label="Black" value="black" />
-      </Picker>
 
       {/* <DropDownPicker */}
       {/*  items={[ */}
