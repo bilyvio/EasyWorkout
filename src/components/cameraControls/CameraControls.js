@@ -7,7 +7,7 @@ const CameraControls = ({ navigation }) => {
 
   return (
     <View style={styles.tabBar}>
-      <TouchableOpacity style={styles.camera}>
+      <TouchableOpacity style={styles.camera} onPress={() => navigation.navigate('Details')}>
         <Icon name="camera" size={50} color="#a4a2aa" />
       </TouchableOpacity>
       <TouchableOpacity style={styles.menu} onPress={() => navigation.openDrawer()}>

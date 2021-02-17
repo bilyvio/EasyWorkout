@@ -4,13 +4,17 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import IntroButton2 from '../../components/IntroButton2';
+import { ThemeContext } from '../../components/theme-context';
 
 const Intro2 = ({ navigation }) => {
+  const {
+    fontThemeColor, buttonTextColor, bgThemeImage2
+  } = React.useContext(ThemeContext);
   return (
       <View style={styles.container}>
-      <ImageBackground source={require('../../../assets/images/intro2_mockup_red.png')} style={styles.image}>
+      <ImageBackground source={bgThemeImage2} style={styles.image}>
           <View style={styles.titleView}>
-            <Text style={styles.textBar}>Have a good health</Text>
+            <Text style={{...styles.textBar, color:fontThemeColor}}>Have a good health</Text>
           </View>
           <View style={styles.textView}>
                   <Text style={styles.lowTextBar}>
@@ -25,6 +29,7 @@ const Intro2 = ({ navigation }) => {
           <IntroButton2
               onPress={() => navigation.navigate('Intro3')}
               title="Next"
+              textColor={buttonTextColor}
             />
           </View>
       </ImageBackground>

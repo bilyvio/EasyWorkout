@@ -6,7 +6,7 @@ const IntroButton2 = (props) => {
   const { buttonBar, buttonText } = styles;
   return (
     <TouchableOpacity style={buttonBar} onPress={props.onPress}>
-      <Text style={buttonText}>
+      <Text style={{...buttonText, color:props.textColor}}>
         Next
         {props.children}
       </Text>

@@ -5,6 +5,26 @@ export default StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
   },
+  navBar: {
+    height: 95,
+    backgroundColor: '#EE4733',
+    elevation: 3,
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
+    // justifyContent: 'space-between'
+  },
+
+  sectionTitle: {
+    top: '5%',
+    fontFamily: 'Quicksand_700Bold',
+    fontSize: 23,
+    lineHeight: 25,
+    color: '#FFFFFF',
+    alignSelf: 'center'
+  },
   rightNav: {
     flexDirection: 'row'
   },
@@ -13,10 +33,6 @@ export default StyleSheet.create({
   },
   backgroundVideo: {
     position: 'absolute',
-    top: 0,
-    left: 0,
-    bottom: 0,
-    right: 0,
   },
   navItem: {
     marginTop: 30,
@@ -24,7 +40,6 @@ export default StyleSheet.create({
   },
   body: {
     flex: 1,
-    marginTop: 5
   },
   tabBar: {
     backgroundColor: '#FFFFFF',
@@ -52,8 +67,6 @@ export default StyleSheet.create({
     marginLeft: 17,
     marginTop: 20,
     fontFamily: 'Quicksand_700Bold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
     fontSize: 20,
     lineHeight: 25,
     color: '#707070',
@@ -63,8 +76,6 @@ export default StyleSheet.create({
     marginLeft: 19,
     marginTop: 20,
     fontFamily: 'Quicksand_700Bold',
-    fontStyle: 'normal',
-    fontWeight: 'bold',
     fontSize: 18,
     lineHeight: 22.5,
     color: '#820E0E',
@@ -73,8 +84,6 @@ export default StyleSheet.create({
     height: 20,
     marginLeft: 50,
     fontFamily: 'Quicksand_700Bold',
-    fontStyle: 'normal',
-    fontWeight: 'normal',
     fontSize: 16,
     lineHeight: 20,
     color: '#707070',

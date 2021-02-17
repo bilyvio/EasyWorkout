@@ -9,10 +9,12 @@ import ViewMoreText from 'react-native-view-more-text';
 import LightVideo from '../../../assets/videos/butterfly.mp4';
 import styles from './styles';
 import {useFonts,Quicksand_700Bold,Quicksand_500Medium} from "@expo-google-fonts/quicksand";
+import { ThemeContext } from '../../components/theme-context';
 
 const Details = () => {
   const [loaded] = useFonts({Quicksand_700Bold,Quicksand_500Medium});
   const [isVideoActive, setIsVideoActive] = useState(true);
+  const { bgThemeColor, fontThemeColor } = React.useContext(ThemeContext);
 
   // @TODO add loading indicator instead of null here
   if (!loaded) {
@@ -20,6 +22,9 @@ const Details = () => {
   }
   return (
     <View style={styles.container}>
+      <View style={{...styles.navBar, backgroundColor: bgThemeColor}}>
+        <Text style={styles.sectionTitle}>Identified</Text>
+      </View>
       <View style={styles.body}>
 
         {isVideoActive && (
@@ -36,7 +41,7 @@ const Details = () => {
         )}
         <View style={styles.margin3}>
           <Text style={styles.nameText}>Butterfly</Text>
-          <Text style={styles.contraindicationsText}>Description</Text>
+          <Text style={{...styles.contraindicationsText, color: fontThemeColor}}>Description</Text>
           <ViewMoreText
             numberOfLines={7}
             textStyle={{ textAlign: 'left' }}
@@ -47,7 +52,7 @@ const Details = () => {
               exercises for the posterior delta.
             </Text>
           </ViewMoreText>
-          <Text style={styles.contraindicationsText}>Execution technique</Text>
+          <Text style={{...styles.contraindicationsText, color: fontThemeColor}}>Execution technique</Text>
           <ViewMoreText
             numberOfLines={7}
             textStyle={{ textAlign: 'left' }}

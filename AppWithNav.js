@@ -16,24 +16,6 @@ import { CameraTitle } from './src/components/CameraTitle/styles';
 import Support from './src/screens/support_screen/support_screen';
 import { Drawer_Content } from './src/components/Drawer_Content/Drawer_Content';
 
-const headerConfig = {
-  title: 'Scan the simulator',
-  headerStyle: {
-    height: 85,
-    backgroundColor: '#EE4733',
-    elevation: 3
-  },
-  headerTintColor: '#fff',
-  headerTitleAlign: 'center',
-  headerTitleStyle: {
-    fontFamily: 'Quicksand_700Bold',
-    fontSize: 23,
-    lineHeight: 25,
-    color: '#FFFFFF',
-    alignSelf: 'center'
-  },
-};
-
 const Drawer = createDrawerNavigator();
 function CameraScreen({ navigation }) {
   return (
@@ -46,10 +28,6 @@ function CameraScreen({ navigation }) {
 const Stack = createStackNavigator();
 
 export default function AppWithNav() {
-
-  const {
-    theme, bgThemeColor, fontThemeColor, changeTheme
-  } = React.useContext(ThemeContext);
 
   const [loaded] = useFonts({ Quicksand_500Medium, Quicksand_700Bold });
   const [isVideoActive, setIsVideoActive] = useState(true);
@@ -65,52 +43,10 @@ export default function AppWithNav() {
         <Stack.Screen name="Intro" component={Intro} options={{ headerShown: false }} />
         <Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} />
         <Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} />
-        <Stack.Screen
-          name="Camera"
-          component={CameraScreen}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="Details"
-          component={Details}
-          options={{
-            ...headerConfig,
-            title: 'Identified',
-            headerStyle: {
-              height: 90,
-              backgroundColor: '#EE4733',
-              elevation: 3
-            }
-          }}
-        />
-        <Stack.Screen name="Support" component={Support} options={{
-            ...headerConfig,
-            title: 'Support',
-            headerStyle: {
-                height: 90,
-                backgroundColor: bgThemeColor,
-                elevation: 3
-            },
-            headerTitleStyle: {
-                color: fontThemeColor,
-            }
-        }} />
-        <Stack.Screen
-          name="settings"
-          component={SettingsComponent}
-          options={{
-            ...headerConfig,
-            title: 'Settings',
-            headerStyle: {
-              height: 90,
-              backgroundColor: bgThemeColor,
-              elevation: 3
-            },
-            headerTitleStyle: {
-              color: fontThemeColor,
-            }
-          }}
-        />
+        <Stack.Screen name="Camera" component={CameraScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="Details" component={Details} options={{ headerShown: false }}/>
+        <Stack.Screen name="Support" component={Support} options={{ headerShown: false }} />
+        <Stack.Screen name="settings" component={SettingsComponent} options={{ headerShown: false}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

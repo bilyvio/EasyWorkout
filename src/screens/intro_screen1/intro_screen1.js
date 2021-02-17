@@ -8,17 +8,23 @@ import {
     Image,
     View
 } from 'react-native';
+import { ThemeContext } from '../../components/theme-context';
 
 const Intro = ({ navigation }) => {
+  const {
+    buttonTextColor, bgThemeImage1
+  } = React.useContext(ThemeContext);
     return (
-        <ImageBackground source={require('../../../assets/images/intro1_mockup_red.png')} style={styles.image}>
+        <ImageBackground source={bgThemeImage1} style={styles.image}>
             <View style={styles.textView}>
                 <Text style={styles.titleBar}>EasyWorkout</Text>
                 <Text style={styles.textBar}>Being healthy is all, no health is nothing. </Text>
                 <Text style={styles.textBar}>So why do not we start?</Text>
             </View>
             <View style={styles.buttonView}>
-                <IntroButton onPress={() => navigation.navigate('Intro2')}
+                <IntroButton
+                  onPress={() => navigation.navigate('Intro2')}
+                  textColor={buttonTextColor}
                 />
             </View>
         </ImageBackground>
