@@ -22,6 +22,7 @@ function CameraScreen({ navigation }) {
     <Drawer.Navigator drawerContent={(props) => <Drawer_Content {...props} />}>
       <Drawer.Screen name="WorkOut" component={CameraContainer} />
       <Drawer.Screen name="settings" component={SettingsComponent} />
+      <Drawer.Screen name="Details" component={Details} />
       <Drawer.Screen name="Support" component={Support} />
     </Drawer.Navigator>
   );
@@ -46,7 +47,6 @@ export default function AppWithNav() {
         <Stack.Screen name="Intro2" component={Intro2} options={{ headerShown: false }} />
         <Stack.Screen name="Intro3" component={Intro3} options={{ headerShown: false }} />
         <Stack.Screen name="Camera" component={CameraScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name="Details" component={Details} options={{ headerShown: false }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

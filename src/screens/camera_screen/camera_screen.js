@@ -16,7 +16,7 @@ const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });
   const DETAILS_NAVIGATION_TIMEOUT = 90000;
   const [type, setType] = useState(Camera.Constants.Type.back);
-  const [isVideoActive, setIsVideoActive] = useState(false);
+  const [isVideoActive, setIsVideoActive] = useState(true);
   const {
     theme, bgThemeColor, fontThemeColor, changeTheme
   } = React.useContext(ThemeContext);
@@ -38,7 +38,7 @@ const CameraContainer = ({ navigation }) => {
           Scan the simulator
         </Text>
       </View>
-      <Camera style={styles.flexContainer} type={type} />
+      {/*<Camera style={styles.flexContainer} type={type} />*/}
       {isVideoActive && <VideoComponent />}
       <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
     </View>
