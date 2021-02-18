@@ -52,6 +52,9 @@ export default StyleSheet.create({
     color: '#820E0E',
   },
   descriptionText: {
+    textAlign: 'justify',
+    marginLeft: '2%',
+    marginRight: '2%',
     fontFamily: 'Quicksand_700Bold',
     fontSize: 16,
     lineHeight: 20,
