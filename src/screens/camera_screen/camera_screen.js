@@ -38,7 +38,7 @@ const CameraContainer = ({ navigation }) => {
           Scan the simulator
         </Text>
       </View>
-      {/* <Camera style={styles.flexContainer} type={type} /> */}
+      <Camera style={styles.flexContainer} type={type} />
       {isVideoActive && <VideoComponent />}
       <CameraControls setType={setType} typeFromProps={type} navigation={navigation} />
     </View>

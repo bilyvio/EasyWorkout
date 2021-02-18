@@ -32,7 +32,7 @@ export const styles = StyleSheet.create({
   buttonBar: {
     width: 320,
     height: 50,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#eaeaea',
     borderRadius: 90,
     justifyContent: 'center',
     alignItems:'center',
