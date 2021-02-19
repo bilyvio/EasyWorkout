@@ -8,7 +8,7 @@ import {
     Image,
     View
 } from 'react-native';
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
 
 const Intro = ({ navigation }) => {
   const {

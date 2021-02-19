@@ -4,7 +4,7 @@ import {
 } from 'react-native';
 import { styles } from './styles';
 import IntroButton2 from '../../components/IntroButton2';
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
 
 const Intro2 = ({ navigation }) => {
   const {

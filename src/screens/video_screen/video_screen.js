@@ -9,7 +9,7 @@ import ViewMoreText from 'react-native-view-more-text';
 import LightVideo from '../../../assets/videos/butterfly.mp4';
 import styles from './styles';
 import {useFonts,Quicksand_700Bold,Quicksand_500Medium} from "@expo-google-fonts/quicksand";
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
 import {ScrollView} from "react-native";
 
 const Details = (props) => {

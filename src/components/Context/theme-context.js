@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import colors from '../constants/colors';
+import colors from '../../constants/colors';
 
 const BACKGROUND_IMAGE_INTRO1 = {
-  blood: require('../../assets/images/intro1_mockup_red.png'),
-  orange: require('../../assets/images/intro1_mockuporange.png'),
-  honey: require('../../assets/images/intro1_warmYellow.png'),
-  mint: require('../../assets/images/intro1_mediumSpringGreen.png'),
-  unicorn: require('../../assets/images/intro1_blue_purple.png'),
+  blood: require('../../../assets/images/intro1_mockup_red.png'),
+  orange: require('../../../assets/images/intro1_mockuporange.png'),
+  honey: require('../../../assets/images/intro1_warmYellow.png'),
+  mint: require('../../../assets/images/intro1_mediumSpringGreen.png'),
+  unicorn: require('../../../assets/images/intro1_blue_purple.png'),
 };
 
 const BACKGROUND_IMAGE_INTRO2 = {
-  blood: require('../../assets/images/intro2_mockup_red.png'),
-  orange: require('../../assets/images/intro2_mockuporange.png'),
-  honey: require('../../assets/images/intro2_warmYellow.png'),
-  mint: require('../../assets/images/intro2_mediumSpringGreen.png'),
-  unicorn: require('../../assets/images/intro2_blue_purple.png'),
+  blood: require('../../../assets/images/intro2_mockup_red.png'),
+  orange: require('../../../assets/images/intro2_mockuporange.png'),
+  honey: require('../../../assets/images/intro2_warmYellow.png'),
+  mint: require('../../../assets/images/intro2_mediumSpringGreen.png'),
+  unicorn: require('../../../assets/images/intro2_blue_purple.png'),
 };
 
 const BACKGROUND_IMAGE_INTRO3 = {
-  blood: require('../../assets/images/intro3_mockup_red.png'),
-  orange: require('../../assets/images/intro3_mockuporange.png'),
-  honey: require('../../assets/images/intro3_warmYellow.png'),
-  mint: require('../../assets/images/intro3_mediumSpringGreen.png'),
-  unicorn: require('../../assets/images/intro3_blue_purple.png'),
+  blood: require('../../../assets/images/intro3_mockup_red.png'),
+  orange: require('../../../assets/images/intro3_mockuporange.png'),
+  honey: require('../../../assets/images/intro3_warmYellow.png'),
+  mint: require('../../../assets/images/intro3_mediumSpringGreen.png'),
+  unicorn: require('../../../assets/images/intro3_blue_purple.png'),
 };
 
 const THEME_BG_COLORS = {
@@ -53,9 +53,9 @@ const initialState = {
   theme: 'blood',
   bgThemeColor: colors.blood,
   buttonTextColor: '#EC7E61',
-  bgThemeImage1: require('../../assets/images/intro1_mockup_red.png'),
-  bgThemeImage2: require('../../assets/images/intro2_mockup_red.png'),
-  bgThemeImage3: require('../../assets/images/intro3_mockup_red.png'),
+  bgThemeImage1: require('../../../assets/images/intro1_mockup_red.png'),
+  bgThemeImage2: require('../../../assets/images/intro2_mockup_red.png'),
+  bgThemeImage3: require('../../../assets/images/intro3_mockup_red.png'),
   fontThemeColor: '#CC3913',
   changeTheme: () => {}
 };

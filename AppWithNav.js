@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createStackNavigator } from '@react-navigation/stack';
 import { useFonts, Quicksand_700Bold, Quicksand_500Medium } from '@expo-google-fonts/quicksand';
-import { ThemeContext } from './src/components/theme-context';
+import { ThemeContext } from './src/components/Context/theme-context';
 
 import Intro from './src/screens/intro_screen1/intro_screen1';
 import Intro2 from './src/screens/intro_screen2/intro_screen2';

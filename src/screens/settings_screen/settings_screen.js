@@ -7,7 +7,8 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import DropDownItem from 'react-native-drop-down-item';
 import AnimatedEvent from 'react-native-web/dist/vendor/react-native/Animated/AnimatedEvent';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
+import { SettingsContext } from '../../components/Context/settings-context';
 import { styles } from './styles';
 import { Picker } from 'react-native'
 import colors from '../../constants/colors';
@@ -18,17 +19,18 @@ function getRandomKey() {
 }
 
 const SettingsComponent = ({ navigation }) => {
-
-  const [isSwitchEnabledReminders, setSwitchReminders] = useState(false);
-  const [isSwitchEnabledConnected, setSwitchConnected] = useState(false);
-  const [isSwitchEnabledHealth, setSwitchHealth] = useState(false);
   const IC_ARR_DOWN = require('../../../assets/icons/ic_arr_down.png');
   const IC_ARR_UP = require('../../../assets/icons/ic_arr_up.png');
-  const [selectedLanguage, setLanguage] = useState("English");
 
   const {
     bgThemeColor, fontThemeColor, changeTheme
   } = React.useContext(ThemeContext);
+
+  const {
+    switchReminders, switchConnectedGC, switchHealth, selectedLanguage,
+    changeReminderSwitch, changeConnectedSwitch, changeHealthSwitch,
+    changeLanguage
+  } = React.useContext(SettingsContext);
 
   const Circle = ({style, color}) => {
     return <View style={{...style.circle, backgroundColor: color}}/>;
@@ -42,10 +44,10 @@ const SettingsComponent = ({ navigation }) => {
       <View style={styles.settingsRow}>
         <Text style={styles.labelStyle}>Reminders</Text>
         <Switch
-          value={isSwitchEnabledReminders}
+          value={switchReminders}
           trackColor={{ false: '#767577', true: bgThemeColor }}
           ios_backgroundColor="#3e3e3e"
-          onValueChange={(value) => setSwitchReminders(value)}
+          onValueChange={changeReminderSwitch}
         />
       </View>
       <View style={styles.settingsRow}>
@@ -54,29 +56,29 @@ const SettingsComponent = ({ navigation }) => {
           selectedValue = {selectedLanguage}
           style={{ height: '100%', width: '40%' }}
           mode="dropdown"
-          onValueChange={(itemValue) => setLanguage(itemValue)}
+          onValueChange={(itemValue) => changeLanguage(itemValue)}
         >
-          <Picker.Item label="English" value="english" />
-          <Picker.Item label="Ukrainian" value="ukrainian" />
-          <Picker.Item label="Russian" value="russian" />
+          <Picker.Item label="English" value="English" />
+          <Picker.Item label="Ukrainian" value="Ukrainian" />
+          <Picker.Item label="Russian" value="Russian" />
         </Picker>
       </View>
       <View style={styles.settingsRow}>
         <Text style={styles.labelStyle}>Connected google calendar</Text>
         <Switch
-          value={isSwitchEnabledConnected}
+          value={switchConnectedGC}
           trackColor={{ false: '#767577', true: bgThemeColor }}
           ios_backgroundColor="#3e3e3e"
-          onValueChange={(value) => setSwitchConnected(value)}
+          onValueChange={changeConnectedSwitch}
         />
       </View>
       <View style={styles.settingsRow}>
         <Text style={styles.labelStyle}>Apple Health</Text>
         <Switch
-          value={isSwitchEnabledHealth}
+          value={switchHealth}
           trackColor={{ false: '#767577', true: bgThemeColor }}
           ios_backgroundColor="#3e3e3e"
-          onValueChange={(value) => setSwitchHealth(value)}
+          onValueChange={() => changeHealthSwitch()}
         />
       </View>
 

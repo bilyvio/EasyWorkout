@@ -10,7 +10,7 @@ import CameraControls from '../../components/cameraControls/CameraControls';
 import VideoComponent from '../../components/VideoComponent/VideoComponent';
 
 import styles from './styles';
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
 
 const CameraContainer = ({ navigation }) => {
   const [permission, askForPermission] = usePermissions(Permissions.CAMERA, { ask: true });

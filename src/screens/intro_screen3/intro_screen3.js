@@ -5,7 +5,7 @@ import {
 import { styles } from './styles';
 import IntroButton3 from '../../components/IntroButton3';
 import IntroButton2 from "../../components/IntroButton2";
-import { ThemeContext } from '../../components/theme-context';
+import { ThemeContext } from '../../components/Context/theme-context';
 import colors from '../../constants/colors';
 
 const Intro3 = ({ navigation }) => {
