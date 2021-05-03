@@ -1,13 +1,31 @@
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
+    navBar: {
+        height: 90,
+        backgroundColor: '#EE4733',
+        elevation: 3,
+        paddingHorizontal: 15,
+        flexDirection: 'row',
+        alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center'
+        // justifyContent: 'space-between'
+    },
+    sectionTitle: {
+        top: '5%',
+        fontFamily: 'Quicksand_700Bold',
+        fontSize: 23,
+        lineHeight: 25,
+        color: '#FFFFFF',
+        alignSelf: 'center'
+    },
     question: {
         flexDirection: 'row',
         justifyContent: 'flex-start',
         marginLeft:27,
         top: 25
     },
-
     container1: {
         flexDirection: 'row',
         alignItems: 'center',

@@ -13,9 +13,6 @@ export function Drawer_Content(props) {
                     <View style={styles.menuTitleBar}>
                         <Text style={styles.menuTitleText}>Menu</Text>
                     </View>
-                    {/*<DrawerItem icon={({color,size})=>(*/}
-                    {/*    <Icon name="dumbbell" size={size} color={color}/>*/}
-                    {/*)} label='WorkOut' labelStyle={styles.buttonStyleText} onPress={() => {}}/>*/}
                     <View style={{marginLeft: '15%'}}>
                     <TouchableOpacity style={styles.buttonStyle}
                                       onPress={() =>props.navigation.navigate('WorkOut') }>

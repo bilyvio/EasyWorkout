@@ -3,15 +3,25 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: '3%'
   },
   navBar: {
-    position: 'absolute',
-    width: '100%',
-    height: 100,
-    left: 0,
-    top: 0,
-    backgroundColor: '#EE4733'
+    height: 95,
+    backgroundColor: '#EE4733',
+    elevation: 3,
+    paddingHorizontal: 15,
+    flexDirection: 'row',
+    alignItems: 'center',
+    display: 'flex',
+    justifyContent: 'center'
+    // justifyContent: 'space-between'
+  },
+  sectionTitle: {
+    top: '5%',
+    fontFamily: 'Quicksand_700Bold',
+    fontSize: 23,
+    lineHeight: 25,
+    color: '#FFFFFF',
+    alignSelf: 'center'
   },
   textBar: {
     position: 'absolute',
@@ -43,7 +53,7 @@ export const styles = StyleSheet.create({
     lineHeight: 22,
   },
   settingsRow:{
-    paddingTop: '3%',
+    paddingTop: '5%',
     paddingBottom: '5%',
     marginLeft: '5%',
     marginRight: '5%',
@@ -53,15 +63,24 @@ export const styles = StyleSheet.create({
     borderBottomWidth: 0.5,
     borderColor: '#a6a6a6'
   },
-  languagesRow:{
-    top: '10%',
-    paddingTop: '1%',
-    paddingBottom: '1%',
-    marginLeft: '5%',
-    marginRight: '15%',
+  themeName:{
+    color: "#707070",
+    fontFamily: "Quicksand_500Medium",
+    fontSize: 18,
+    lineHeight: 22,
+  },
+  themeLineView:{
+    paddingTop: '5%',
+    marginLeft: '22%',
     justifyContent:'space-between',
-    alignItems: 'flex-end',
-    flexDirection: 'column',
+    flexDirection: 'row'
+  },
+  circle: {
+    width: 20,
+    height: 20,
+    borderRadius: 20 / 2,
+    backgroundColor: '#EE4733',
+    marginLeft: '65%',
   }
 });
 
